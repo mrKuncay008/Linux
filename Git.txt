@@ -1,0 +1,14 @@
+ /// Membuat Folder Git
+
+ Step 1: Buka github dan buat new repo
+ Step 2: Buat Folder / masuk ke folder yang ingin di uplod
+ Step 3: Masukan "git remote add origin [URL]/Linux.git"
+ Step 4: "git commit -m "Massage" "
+ Step 5: lalu "git push -u origin master"
+
+ Tips:
+ - git remote -v : untuk melihat url remote
+ - git remote set-url origin [URL baru]: Untuk mengganti url remote
+ - git branch -M [BRANCh]: Untuk mengganti / memakai branch
+
+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
