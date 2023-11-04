@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Beautiful Jekyll | MIT license | Copyright Dean Attali 2016 -->
+  <head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Step-By-Step CTF-Web</title>
+
+  <meta name="author" content="r00t3r" />
+
+  
+
+  <link rel="alternate" type="application/rss+xml" title="blog - hacking a little" href="/feed.xml" />
+
+  
+
+  
+    
+      
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css" />
+
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="/css/bootstrap.min.css" />
+    
+      <link rel="stylesheet" href="/css/bootstrap-social.css" />
+    
+      <link rel="stylesheet" href="/css/main.css" />
+    
+  
+
+  
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+    
+  
+
+  
+
+  
+
+  
+
+    <!-- Facebook OpenGraph tags -->
+  
+
+  
+  <meta property="og:title" content="Step-By-Step CTF-Web" />
+  
+
+   
+  <meta property="og:description" content="The following are the steps to follow, when encountered by a web application in a Capture The Flag event. These steps are compiled from my experience in CTF and will be an ongoing project. Spider: One can use BurpSuite or Owasp-Zap for spidering web application. In burp, intercepted packet can...">
+  
+
+
+  <meta property="og:type" content="website" />
+
+  
+  <meta property="og:url" content="http://twisted-fun.github.io/2018-05-20-step-by-step-ctf-web/" />
+  <link rel="canonical" href="http://twisted-fun.github.io/2018-05-20-step-by-step-ctf-web/" />
+  
+
+  
+  <meta property="og:image" content="http://twisted-fun.github.io/img/usui.gif" />
+  
+
+
+  <!-- Twitter summary cards -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@" />
+  <meta name="twitter:creator" content="@" />
+
+  
+  <meta name="twitter:title" content="Step-By-Step CTF-Web" />
+  
+
+  
+  <meta name="twitter:description" content="The following are the steps to follow, when encountered by a web application in a Capture The Flag event. These steps are compiled from my experience in CTF and will be an ongoing project. Spider: One can use BurpSuite or Owasp-Zap for spidering web application. In burp, intercepted packet can...">
+  
+
+  
+  <meta name="twitter:image" content="http://twisted-fun.github.io/img/usui.gif" />
+  
+
+  
+
+</head>
+
+
+  <body>
+
+    
+  
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+        <a class="navbar-brand" href="http://twisted-fun.github.io">blog</a>
+      
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+      
+        
+          <li>
+            
+
+
+
+
+
+
+<a href="/aboutme">About Me</a>
+
+          </li>
+        
+        
+      </ul>
+    </div>
+
+	
+	<div class="avatar-container">
+	  <div class="avatar-img-border">
+	    <a href="http://twisted-fun.github.io ">
+	      <img class="avatar-img" src="/img/usui.gif" />
+		</a>
+	  </div>
+	</div>
+	
+
+  </div>
+</nav>
+
+
+    <!-- TODO this file has become a mess, refactor it -->
+
+
+
+
+
+<header class="header-section ">
+
+<div class="intro-header no-img">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <div class="post-heading">
+          <h1>Step-By-Step CTF-Web</h1>
+		  
+		  
+		  
+		  <span class="post-meta">Posted on May 20, 2018</span>
+		  
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</header>
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+      
+
+      <article role="main" class="blog-post">
+        <p>The following are the steps to follow, when encountered by a web application in a Capture The Flag event. These steps are compiled from my experience in CTF and will be an ongoing project. </p>
+<p><br /></p>
+<h4><b>Spider:</b></h4>
+<p>One can use BurpSuite or Owasp-Zap for spidering web application. In burp, intercepted packet can be passed to the spider for automated spidering. For web applications integrated with login facility though, manual spidering through burp is advised to avoid spider from stepping on logout link.</p>
+<p><br /></p>
+<h4><b>Files Of Interest:</b></h4>
+<p>The following files are often seen in CTF, to be very useful to look into.</p>
+<ul>
+<li>robot.txt</li>
+<li>.htaccess</li>
+<li>sitemap.xml</li>
+<li>config.php</li>
+<li>readme</li>
+<li>Backup files</li>
+</ul>
+<p><br /></p>
+<h4><b>Page Source:</b></h4>
+<p>Analyze the source of whole web application (at least what you find relevant for the challenge). Look for comments, hidden tag or disabled tag, javascript obfuscations etc.</p>
+<p><br /></p>
+<h4><b>Stegnography:</b></h4>
+<p>If any images, videos or files are found on web app. Download them and check for interesting stegnos. We can use the following tools to help us find hidden content in files.</p>
+<p>Images (binwalk, exiftool, stegsolve)</p>
+<p>videos (TrueCrypt)</p>
+<p><br /></p>
+<h4><b>Directory Busting:</b></h4>
+<p>CTF challenges do not endorse brute-forcing the server but sometimes you may need to do some common directory lookups. For this you can use <b>dirb</b>, <b>wfuzz</b> or just <b>burpsuite</b>. In some challenges, you will have to make your own dictionary from challenge website content to bruteforce its directories, in this case <b>cewl</b> is your best friend.</p>
+<p><br /></p>
+<h4><b>Vulnerability Scanning:</b></h4>
+<p>Run a scan using nikto or nessus, you never know when you find something interesting.</p>
+<p><br /></p>
+<h4><b>WebDAV Methods:</b></h4>
+<p>WebDAV gives us numerous facilities that can be used to manipulate files on the web server. Given the nature of the functionality, if these are accessible by low-privileged users, they may provide an effective avenue for attacking an
+application. Here are some methods to look for:
+<br />
+- <b>PUT</b> uploads the attached file to the specified location.
+<br />
+- <b>DELETE</b> deletes the specified resource.
+<br />
+- <b>COPY</b> copies the specified resource to the location given in the Destination header.
+<br />
+- <b>MOVE</b> moves the specified resource to the location given in the Destination header.
+<br />
+- <b>SEARCH</b> searches a directory path for resources.
+<br />
+- <b>PROPFIND</b> retrieves information about the specified resource, such as author, size, and content type.
+<br />
+You can use the OPTIONS method to list the HTTP methods that are permitted in a particular directory or just use <b>devtest</b> tool to make things easier.</p>
+<p><br /></p>
+<h4><b>Request &amp; Response:</b></h4>
+<p>Intercept all requests to the server. Try to change the relevant http header tags or request params and see how web app responds.</p>
+<p><br /></p>
+<h4><b>LFI/RFI:</b></h4>
+<p>Look for query string or post params (ie page=,url=,lang= etc), which might be including other files into the webpage.
+If LFI exists and PHP version &gt;= 5.0.0 then try to use php resource to disclose the server side code.</p>
+<pre><code>php://filter/convert.base64-encode/resource="argument"
+</code></pre>
+<p>If LFI/RFI exists and PHP version &gt;= 5.2.0 with allow_url_include ON. Try data stream method to execute shell on the server
+<br /></p>
+<ul>
+  <li>create php shell payload
+<br /></li>
+  <li>base64 encode
+<br /></li>
+  <li>url encode
+<br /></li>
+</ul>
+
+<pre><code>index.php?file=data://text/plain;base64,"encoded shell"
+</code></pre>
+
+<p>Bypassing added suffix <b>.php</b> for RFI</p>
+<ul>
+  <li><b>To be added</b>
+<br /></li>
+</ul>
+
+<p>Bypassing added suffix <b>.php</b> for RFI</p>
+<ul>
+  <li>make web server on your machine
+<br /></li>
+  <li>create two php script first to download webshell when executed and second the webshell itself
+<br /></li>
+  <li>To make apache treat php code as plain text (so when doing RFI from target, code doesn’t get executed on your host) do as described below
+<br /></li>
+  <li>goto “/etc/apache2/mods-enabled/php5.conf”
+<br /></li>
+  <li>comment the following lines
+<br /></li>
+</ul>
+
+<pre><code>#&lt;FilesMatch ".+\.ph(p[345]?|t|tml)$"&gt;
+#    setHandler application/x-httpd-php
+#&lt;/FilesMatch&gt;
+</code></pre>
+
+<p><br /></p>
+<h4><b>File Upload:</b></h4>
+<p>When file uploads are given always check the following</p>
+<p>Find if server is using a black-list or white-list. On both protection try</p>
+<ul>
+  <li>“file.php<space>" or "file.php."
+<br /></space></li>
+  <li>“file.php.jpg”
+<br /></li>
+  <li>“file.php%00.jpg”
+<br /></li>
+</ul>
+<p>In case of content-type filter use intercepting proxy.</p>
+<p>In case of file-type recognizer try to use</p>
+<ul>
+  <li>Magic Number of accepted files
+<br /></li>
+  <li>Insert your code in comment section of the metadata
+<br /></li>
+  <li>use file modifier (ie image re-sizer) to produce malicious code itself when receiving special input
+<br />
+<br /></li>
+</ul>
+<h4><b>Vulnerable Framework:</b></h4>
+<p>Check if web application is using a framework then if it has any existing vulnerabilities.</p>
+<ul>
+  <li>use searchsploit or exploit-db
+<br />
+<br /></li>
+</ul>
+<h4><b>SQL Injection:</b></h4>
+<p>When it seems like a sql injection, one can use <b>sqlmap</b> to make things easier but without proper use it may not detect even an existing sql injection.</p>
+
+<pre><code>sqlmap --url=http://192.168.0.100:1337/index.php --method POST --data 'username=test&amp;password=test&amp;Submit=Login' --not-string='Username or Password is invalid' --dbms=MySQL --batch --dbs
+</code></pre>
+
+<p>Never forget to do user enumeration, may find interesting things.</p>
+<p><br /></p>
+
+      </article>
+
+      
+        <div class="blog-tags">
+          Tags:
+          
+          
+            <a href="/tags#ctf">ctf</a>
+          
+            <a href="/tags#web">web</a>
+          
+            <a href="/tags#tut">tut</a>
+          
+          
+        </div>
+      
+
+      
+        <!-- Check if any share-links are active -->
+
+
+
+
+<section id = "social-share-section">
+  <span class="sr-only">Share: </span>
+
+  
+  <!--- Share on Twitter -->
+    <a href="https://twitter.com/intent/tweet?text=Step-By-Step+CTF-Web+http://twisted-fun.github.io/2018-05-20-step-by-step-ctf-web/"
+      class="btn btn-social-icon btn-twitter" title="Share on Twitter">
+      <span class="fa fa-fw fa-twitter" aria-hidden="true"></span>
+      <span class="sr-only">Twitter</span>
+    </a>
+  
+
+  
+  <!--- Share on Facebook -->
+    <a href="https://www.facebook.com/sharer/sharer.php?u=http://twisted-fun.github.io/2018-05-20-step-by-step-ctf-web/"
+      class="btn btn-social-icon btn-facebook" title="Share on Facebook">
+      <span class="fa fa-fw fa-facebook" aria-hidden="true"></span>
+      <span class="sr-only">Facebook</span>
+    </a>
+  
+
+  
+
+  
+  <!--- Share on LinkedIn -->
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url=http://twisted-fun.github.io/2018-05-20-step-by-step-ctf-web/"
+      class="btn btn-social-icon btn-linkedin" title="Share on LinkedIn">
+      <span class="fa fa-fw fa-linkedin" aria-hidden="true"></span>
+      <span class="sr-only">LinkedIn</span>
+    </a>
+  
+
+</section>
+
+
+
+      
+
+      <ul class="pager blog-pager">
+        
+        
+        <li class="next">
+          <a href="/2018-05-21-CSAW15-PWN-100/" data-toggle="tooltip" data-placement="top" title="CSAW QUALS 2015 PWN 100">Next Post &rarr;</a>
+        </li>
+        
+      </ul>
+
+      
+        <div class="disqus-comments">
+          <div class="comments">
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'twisted-fun';
+        /* ensure that pages with query string get the same discussion */
+            var url_parts = window.location.href.split("?");
+            var disqus_url = url_parts[0];
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+
+    <footer>
+  <div class="container beautiful-jekyll-footer">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links"><li><a href="/feed.xml" title="RSS"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">RSS</span>
+              </a>
+            </li><li><a href="mailto:pentesting4fun@gmail.com" title="Email me"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Email me</span>
+              </a>
+            </li><li><a href="https://www.facebook.com/iamnothereatm" title="Facebook"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Facebook</span>
+              </a>
+            </li><li><a href="https://linkedin.com/in/nilotpal-saini" title="LinkedIn"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">LinkedIn</span>
+              </a>
+            </li><li><a href="https://github.com/twisted-fun" title="GitHub"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">GitHub</span>
+              </a>
+            </li><li><a href="https://twitter.com/_r00t3r_" title="Twitter"><span class="fa-stack fa-lg" aria-hidden="true">
+                  <i class="fa fa-circle fa-stack-2x"></i>
+                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                </span>
+                <span class="sr-only">Twitter</span>
+              </a>
+            </li></ul>
+      <p class="copyright text-muted">
+      r00t3r
+      &nbsp;&bull;&nbsp;
+      2020
+
+      
+      &nbsp;&bull;&nbsp;
+      <a href="http://twisted-fun.github.io">twisted-fun.github.io</a>
+      
+
+      
+      </p>
+          <!-- Please don't remove this, keep my open source work credited :) -->
+    <p class="theme-by text-muted">
+      Theme by
+      <a href="http://deanattali.com/beautiful-jekyll/">beautiful-jekyll</a>
+    </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+  
+    
+
+
+
+
+
+
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+      <script>
+      	if (typeof jQuery == 'undefined') {
+      	  document.write('<script src="/js/jquery-1.11.2.min.js"></scr' + 'ipt>');
+      	}
+      </script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/bootstrap.min.js"></script>
+    
+  
+    <!-- doing something a bit funky here because I want to be careful not to include JQuery twice! -->
+    
+	<script src="/js/main.js"></script>
+    
+  
+
+
+
+	<!-- Google Analytics -->
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-119597734-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<!-- End Google Analytics -->
+
+
+  
+  </body>
+</html>

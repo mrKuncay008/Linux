@@ -1,0 +1,9 @@
+
+
+ [[[[[[ TOOLS ]]]]]]
+
+
+ -untuk scan directory domain/server web
+	= - dirb (# dirb https://domain.com/)
+	  - nikto (# nikto -h host )
+	  - cewl (cewl host)

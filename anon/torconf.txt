@@ -1,0 +1,16 @@
+
+	---- configurasi Tor sock untuk vpn -----
+
+- apt install tor
+- cd /etc/tor
+	vim torrc
+	HiddenServiceDir /var/lib/tor/hidden_service/
+	HiddenServicePort 80 127.0.0.1:80
+	HiddenServiceDir /var/lib/tor/other_hidden_service/
+	HiddenServicePort 80 127.0.0.1:80
+	HiddenServicePort 22 127.0.0.1:22
+
+- torpass=$(tor --hash-password "Password")
+- ss -nlt
+- systemctl retart tor
+- https://www.dnsleaktest.com/ untuk memastikan dns trafic berubah

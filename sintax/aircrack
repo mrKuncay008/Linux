@@ -1,0 +1,21 @@
+
+				[[[[[[[[[ AIRCRACK-ng command ]]]]]]]]]]]]
+
+
+ -- start mengganti interface menjadi monitor : airmon-ng check kill / start [interface]
+						pastikan masuk mode monitor
+
+ -- lalu masuk ke router trace interface : airodump-ng [interface]
+
+ -- masuk ke ssid yg kita target : airodump-ng [interface] -d [nama BSSID]  
+
+ -- membuat file .cap BSSID nya agar untuk di encripty dgn txt : 
+
+	airodump-ng -w hack1 -c [cannel] --bssid [nama bssid] [interface]
+
+-- Terakhir encripty password mengguanakan txt random dari aircrack dan txt rockyou
+
+		aircrack-ng [nama file.cap] -w /folder/folder/folder/rockyou.txt
+
+
+ end

@@ -1,0 +1,151 @@
+1. sudo su
+Berfungsi untuk login sebagai root/pengguna tertinggi
+
+2. cd
+Berfungsi untuk berpindah direktori
+Penggunaan : cd alamat_direktori
+Contoh : root@ubuntu/home#cd bin (Berpindah dari home menuju bin)
+
+3. cd ..
+Berfungsi untuk kembali dari direktori
+Penggunaan : cd ..
+Contoh : root@ubuntu/home/bin# cd .. (Kembali dari bin menuju home)
+
+4. mkdir (make directory)
+Berfungsi untuk membuat direktori
+Penggunaan : mkdir [nama-direktori]
+Contoh : root@ubuntu/home/#mkdir bin (Membuat direktori bernama “bin”)
+
+5. cat
+Berfungsi untuk membuat file
+Penggunaan : cat >nama_file
+Contoh : root@ubuntu/home/#cat > bin lalu “enter” Biodata
+
+ctrl+c (mengakhiri dan simpan)
+(Membuat file bernama “bin” dengan isi file “Biodata”)
+
+6. rm (remove file)
+Berfungsi untuk menghapus file
+Penggunaan : rm nama_file
+Contoh : root@ubuntu/home/bin #rm biodata lalu “enter” (menghapus file bernama “Biodata”)
+
+7. rmdir (remove direktori)
+Berfungsi untuk menghapus direktori
+Penggunaan : rmdir nama_direktori
+Contoh : root@ubuntu/home#rmdir bin lalu “enter” (menghapus direktori bernama “bin”)
+
+Nah, itulah beberapa kode perintah yang paling utama dengan cara pemaikaiannya.
+
+Untuk selanjutnya kalian bisa mencoba menggunakan beberapa kode perintah untuk sistem operasi linux ubuntu di dalam mode CLI, berikut ini Kumpulan Perintah Dasar Linux Ubuntu Server (CLI) :
+
+    :q berfungsi untuk keluar dari editor tanpa menyimpan file
+    :w berfungsi untuk menyimpan file (save)
+    :wq berfungsi untuk keluar dari editor sekaligus menyimpan file
+    adduser berfungsi untuk menambah pengguna baru
+    apropos berfungsi untuk untuk Mencari perintah – perintah atau file yang mengandung huruf yang dimaksud
+    apropos topic berfungsi untuk menampilkan bantuan manual berdasarkan topik
+    bc berfungsi untuk menampilkan calculator
+    bunzip2 berfungsi untuk meng-uncompress file dengan format (*.bz2) dengan utiliti “bzip2”, digunakan pada file yang besar
+    cal berfungsi untuk menampilkan/melihat kalender
+    cat /etc/printcap berfungsi untuk melihat printer yang telah disetup
+    cat /proc/cpuinfo berfungsi untuk melihat file pada /proc directori yang bukan merupakan file nyata
+    cat /proc/filesystems berfungsi untuk melihat filesystem yang digunakan
+    cat /proc/interrupts berfungsi untuk melihat alamat interrupt yang dipakai
+    cat /proc/version berfungsi untuk melihat Versi dari Linux dan informasi lainnya
+    cat berfungsi untuk membuat file
+    cd berfungsi untuk berpindah ke direktori lain
+    chfn berfungsi untuk Merubah informasi dari user
+    chmod berfungsi untuk mengatur hak akses suatu file atau direktori
+    clear berfungsi untuk membersihkan seluruh layar terminal, (sama dengan perintah CLS di DOS)
+    cp berfungsi untuk menyalin sebuah file
+    cut berfungsi untuk Mengambil kolom tertentu dari baris-baris masukannya yang ditentukan pada option –c
+    date berfungsi untuk menampilkan tanggal dan waktu
+    df -h (disk free) berfungsi untuk melihat informasi pemakaian disk pada seluruh system
+    Dmesg berfungsi untuk melihat hardware yang sedang beraktifitas
+    du / -bh (disk usage) berfungsi untuk melihat secara detil pemakaian disk untuk setiap direktori, dimulai dari root
+    echo $PATH berfungsi untuk melihat isi dari variabel PATH
+    Echo berfungsi untuk menuliskan sesuatu kata atau kalimat ke sebuah file
+    file berfungsi untuk melihat ekstensi / tipe suatu file yang dimaksud
+    find / -name berfungsi untuk mencari “namafile” pada komputer anda dimulai dengan direktori /
+    finger berfungsi untuk melihat informasi user
+    grep berfungsi untuk mencari kata di dalam suatu file
+    gunzip berfungsi untuk meng-uncompress sebuah file zip (*.gz” or *.z). dengan menggunakan gzip (juga zip atau compress) jika anda menginginkan mengompress file
+    halt berfungsi untuk mematikan sistem
+    history berfungsi untuk melihat perintah apa saja yang telah digunakan
+    hostname berfungsi untuk menampilkan nama local host
+    Id berfungsi untuk melihat ID yang ada di Linux, baik ID dari User, Grup, Device yang terpasang
+    id username berfungsi untuk mengecek user id (uid) atau group id (gid)
+    Ifconfig berfungsi untuk melihat informasi pada kartu jaringan, seperti IP address, Mac address, dan lain-lain
+    kill berfungsi untuk menghentikan proses yang sedang berjalan
+    last berfungsi untuk melihat user sebelumnya yang telah login di komputer
+    less berfungsi untuk melihat suatu file layar per layar, dan tekan tombol “q” apabila ingin keluar
+    ln -s berfungsi untuk membuat Simbolic Links
+    locate berfungsi untuk mencari suatu file pada direktori lain yang sedang tidak dikunjungi. Catatan : Sebelum menuliskan perintah locate, tuliskan perintah updatedb. Tunggu hingga selesai, baru tuliskan perintah locate
+    ls -a berfungsi untuk menampilkan semua file atau direktori yang tersembunyi
+    ls -f berfungsi untuk menampilkan semua file atau direktori tanpa proses shorting
+    ls –l berfungsi untuk melihat semua file lengkap
+    Lshw berfungsi untuk melihat hardware komputer
+    Lspci berfungsi untuk melihat perangkat pci yang sedang terkoneksi ke komputer
+    Lsusb berfungsi untuk melihat perangkat usb yang sedang terkoneksi ke komputer
+    lynx berfungsi untuk melihat file html atau browse ke net dengan text mode
+    man (manual) berfungsi untuk menampilkan halaman manual untuk semua perintah UNIX
+    mc berfungsi untuk menjalankan “Midnight Commander” sebagai file manager
+    mcopy berfungsi untuk menyalin suatu file dari atau ke dos filesystem
+    mkdir berfungsi untuk membuat direktori baru
+    more berfungsi untuk untuk melihat isi suatu file
+    mv berfungsi untuk memindahkan file, bisa juga untuk merubah nama sebuah file
+    nano berfungsi untuk text editor (notepad)
+    passwd berfungsi untuk menggunakan password
+    pg berfungsi untuk melihat isi suatu file dengan fasilitas melihat isi file dari atas dan untuk kebawah menggunakan tombol Enter untuk perlayar
+    pico –w berfungsi untuk mengedit suatu text file, dengan menonaktifkan fungsi word wrap
+    pr berfungsi untuk mencetak isi file ke printer
+    ps (print status) berfungsi untuk melihat proses-proses yang dijalankan oleh user
+    ps axu berfungsi untuk melihat seluruh proses yang dijalankan, walaupun tanpa terminal control, juga ditampilkan nama dari user untuk setiap proses
+    pwd berfungsi untuk menampilkan nama direktori dimana Anda sedang berada
+    reboot berfungsi untuk menghidupkan ulang sistem/kompute
+    restart berfungsi untuk menjalankan ulang service yang sedang berjalan
+    rlogin (remote login) berfungsi untuk menghubungkan anda kekomputer lain
+    rm –f (file remove) berfungsi untuk menghapus file nya saja, tanpa direktori dan subdirektorinya
+    rm berfungsi untuk menghapus file
+    rm –r (recursive remove) berfungsi untuk menghapus file, direktori dan subdirektorinya
+    rmdir berfungsi untuk menghapus direktori
+    rsh (remote shell) sebagai jalan lain untuk menghubungkan anda ke remote machine
+    rwho –a berfungsi untuk melihat semua user yg login pada network anda
+    set berfungsi untuk melihat environment dari user yang aktif
+    shutdown berfungsi sama seperti halt, digunakan untuk mematikan sistem
+    sort berfungsi untuk mengurutkan suatu file teks menurut abjad
+    start berfungsi untuk menjalankan sebuah service
+    startx berfungsi untuk menjalankan X-window server dan meload default windows manager
+    stop berfungsi untuk menghentikan sebuah service yang sedang berjalan
+    sudo berfungsi untuk menjalankan perintah sebagai root
+    tail berfungsi untuk menampilkan 10 baris terakhir dari suatu file
+    talk berfungsi untuk dengan user lain yg sedang login pada mesin kita
+    tar berfungsi untuk mengekstrak file dengan format *tar.gz *.tgz
+    tar –zxvf berfungsi untuk meng-untar sebuah file tar sekaligus meng-uncompress file tersebut (*.tar.gz atau *.tgz)
+    telnet berfungsi untuk untuk menghubungkan komputer kita ke komputer lain dengan menggunakan protokol TELNET
+    time berfungsi untuk melihat jumlah waktu yg ditangani
+    Top berfungsi untuk melihat proses yang sedang berjalan, seperti Task Manager pada Windows
+    touch berfungsi untuk membuat file baru dalam keadaan kosong
+    uniq berfungsi untuk Menghilangkan baris – baris berurutan yang mengalami duplikasi
+    unzip berfungsi untuk mengekstrak atau mengurai file yang dikompress dalam bentuk *.zip
+    uptime berfungsi untuk melihat jumlah waktu pemakaian komputer oleh seseorang, terhitung proses reboot terakhir
+    W berfungsi untuk Melihat siapa saja yang sedang Login dengan informasi yang sangat lengkap
+    wall untuk pengiriman pesan oleh super user
+    wc berfungsi untuk menghitung jumlah kata, jumlah baris dan jumlah karakter dalam suatu file
+    whatis berfungsi untuk menampilkan fungsi dari suatu perintah saja yang dimaksud
+    whatis addgroup berfungsi untuk untuk mengetahui apa itu addgroup
+    whatis adduser berfungsi untuk untuk mengetahui apa itu adduser
+    whatis date berfungsi untuk untuk mengetahui apa itu date
+    which berfungsi untuk menunjukan lokasi dari suatu perintah
+
+    Kode kombinasi menggunakan tombol keyboard, Linux Ubuntu Server mode CLI
+
+    Ctrl + A untuk ke awal baris yang sedang Anda ketikkan.
+    Ctrl + E Ke akhir baris yang sedang Anda ketikkan.
+    Ctrl + L Membersihkan seluruh layar terminal, seperti perintah clear.
+    Ctrl + U Bersihkan baris sebelum posisi kursor. Kalau Anda di akhir baris, akan menghapus semua barisnya.
+    Ctrl + H Seperti backspace.
+    Ctrl + R Mencari perintah Anda sebelumnya.
+    Ctrl + C Matikan apa pun yang sedang Anda jalankan.
+    Ctrl + D Keluar dari shell saat ini.
+    Ctrl + Z Menaruh apa pun yang Anda jalankan di Terminal ke suspended background process. Fg mengembalikannya.

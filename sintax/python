@@ -1,0 +1,27 @@
+
+
+		////// PYTHON COMMAND \\\\\\\
+
+    Sintaks: os.system(perintah)
+
+    Parameter:
+    command: Ini adalah tipe string yang memberi tahu perintah mana yang harus dieksekusi.
+    contoh:
+import os
+cmd = 'ls -l'
+os.system(cmd)
+
+    Nilai Pengembalian: Di Unix, nilai pengembalian adalah status keluar dari proses dan pada Windows,     nilai pengembalian adalah nilai yang dikembalikan oleh shell sistem setelah menjalankan perintah. 
+
+  // me run file browser html
+	Dalam Python, browser web menyediakan antarmuka tingkat tinggi yang memungkinkan menampilkan dokumen berbasis web kepada pengguna. Modul browser web dapat digunakan untuk meluncurkan browser secara platform-independen seperti yang ditunjukkan di bawah ini:
+
+ 	subproses
+fungsi os.system tidak digunakan lagi. Dengan kata lain, fungsi ini telah diganti. 	Modul subproses berfungsi sebagai pengganti ini dan Python secara resmi merekomendasikan penggunaan subproses untuk perintah shell.
+os.system langsung mengeksekusi perintah shell dan rentan terhadap kerentanan. 	Modul subproses mengatasi kerentanan ini dan lebih aman. 
+
+# import module
+import webbrowser
+  
+# open html file
+webbrowser.open('GFG.html') 

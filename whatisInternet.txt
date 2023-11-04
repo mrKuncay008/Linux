@@ -1,0 +1,22 @@
+
+
+Internet
+
+Sistem jaringan komputer yang saling terhubung secara global
+yang menggunakan TCP-IP untunk menghubungkan perangkat di seluruh dunia.
+isp = adlah server pusat untuk mentf data yang saling terhubung
+	yang biasa di sebut Topologi.
+
+internet web = Sistem untuk Sekumpulan file dan dokumen/informasi
+		yang memanfaat kan teknolgi internet
+
+Jaringan global = Tercipta karena banyaknya perangkat komputer yang 		     saling terhubung
+
+TCP/IP = Protokol yang digunakan oleh internet
+
+HTTP = Hyprtext transfer protocol(media tranfer internet dari web )
+
+HTTP methode:
+	- http request: client >> (post or get rquest ) >> server
+	- http respons: server >> (Send back informaition ) >> client
+
