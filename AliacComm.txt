@@ -1,0 +1,20 @@
+
+Dengan menggunakan perintah alias, Anda dapat membuat perintah sendiri. 
+Sangat mudah untuk membuat perintah Anda sendiri.
+
+// Contoh membuat perintah alias :
+alias cdLinux="cd ~/Program/Linux"
+
+// Alias check command
+alias -p
+
+// Menghapus Alias
+unalias cdLinux
+
+// Mengunakan Funtion di bashrc
+function gohome() {
+        cd ~/
+        echo Navigated to home directory
+}
+
+

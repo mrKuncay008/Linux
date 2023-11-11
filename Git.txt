@@ -11,4 +11,13 @@
  - git remote set-url origin [URL baru]: Untuk mengganti url remote
  - git branch -M [BRANCh]: Untuk mengganti / memakai branch
 
-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
+	remote dengan ssh:
+
+	Buka file ssh contoh: ~/.ssh
+	buat file dengan nama config yang isi nya: 
+	 Host example.com
+	   ForwardAgent yes
+	buka github dan atur SSH KEY masukan code ssh.pub ke dalam git hub
+	lalu git remote set-url (ssh)
+
+
