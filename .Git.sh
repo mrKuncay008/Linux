@@ -20,3 +20,5 @@ git commit -m "$commit"
 
 echo
 
+git push
+echo
