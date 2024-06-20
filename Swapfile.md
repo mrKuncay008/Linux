@@ -14,4 +14,25 @@ Secara umum, swap space adalah solusi sementara untuk memperluas kapasitas memor
 
 ## Tutor
 
+## Tutor
+
 Refensi Web: https://techarea.co.id/cara-menambahkan-ruang-swap-pada-ubuntu-20-04/
+
+    sudo swapon --show
+#
+    df -h
+#
+    OutputFilesystem      Size  Used Avail Use% Mounted on
+    udev            474M     0  474M   0% /dev
+    tmpfs            99M  932K   98M   1% /run
+    /dev/vda1        25G  1.4G   23G   7% /
+    tmpfs           491M     0  491M   0% /dev/shm
+    tmpfs           5.0M     0  5.0M   0% /run/lock
+    tmpfs           491M     0  491M   0% /sys/fs/cgroup
+    /dev/vda15      105M  3.9M  101M   4% /boot/efi
+    /dev/loop0       55M   55M     0 100% /snap/core18/1705
+    /dev/loop1       69M   69M     0 100% /snap/lxd/14804
+    /dev/loop2       28M   28M     0 100% /snap/snapd/7264
+    tmpfs            99M     0   99M   0% /run/user/1000
+
+Perangkat dengan / di dalam kolom Mounted on adalah diska kita dalam kasus ini. Kita memiliki banyak ruang yang tersedia dalam contoh ini (hanya digunakan 1,4 G). Penggunaan Anda mungkin akan berbeda.
