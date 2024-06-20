@@ -20,4 +20,12 @@
 	buka github dan atur SSH KEY masukan code ssh.pub ke dalam git hub
 	lalu git remote set-url (ssh)
 
+// Menambah atau menimpa repo ke folder baru: 
 
+	- git init, ke folder yang ingin di timpa
+	- git remote add origin git@github.com:mrKuncay008/Java.git (url)
+	- git pull origin master
+	- git config pull.rebase true
+	- git pull origin master
+	- git rebase --continue
+	- git pull origin master
