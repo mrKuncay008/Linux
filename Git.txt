@@ -1,4 +1,4 @@
- /// Membuat Folder Git
+## Membuat Folder Git
 
  Step 1: Buka github dan buat new repo
  Step 2: Buat Folder / masuk ke folder yang ingin di uplod
@@ -7,25 +7,29 @@
  Step 5: lalu "git push -u origin master"
 
  Tips:
- - git remote -v : untuk melihat url remote
- - git remote set-url origin [URL baru]: Untuk mengganti url remote
- - git branch -M [BRANCh]: Untuk mengganti / memakai branch
+ 	git remote -v : untuk melihat url remote
+ 	git remote set-url origin [URL baru]: Untuk mengganti url remote
+ 	git branch -M [BRANCh]: Untuk mengganti / memakai branch
 
-	remote dengan ssh:
+## remote dengan ssh:
 
-	Buka file ssh contoh: ~/.ssh
-	buat file dengan nama config yang isi nya: 
-	 Host example.com
-	   ForwardAgent yes
-	buka github dan atur SSH KEY masukan code ssh.pub ke dalam git hub
-	lalu git remote set-url (ssh)
+- Buka file ssh contoh: ~/.ssh
+- buat file dengan nama config yang isi nya:
+	Host example.com
+- ForwardAgent yes
+- buka github dan atur SSH KEY masukan code ssh.pub ke dalam git hub
+- lalu git remote set-url (ssh)
 
-// Menambah atau menimpa repo ke folder baru: 
+## Menambah atau menimpa repo ke folder baru: 
 
-	- git init, ke folder yang ingin di timpa
-	- git remote add origin git@github.com:mrKuncay008/Java.git (url)
-	- git pull origin master
-	- git config pull.rebase true
-	- git pull origin master
-	- git rebase --continue
-	- git pull origin master
+- git init, ke folder yang ingin di timpa
+- git remote add origin git@github.com:mrKuncay008/Java.git (url)
+- git pull origin master
+- git config pull.rebase true
+- git pull origin master
+- git rebase --continue
+- git pull origin master
+
+## Melihat atau mentrack projek yang di ubah :
+- git log
+- git show / git show <id-commit>
