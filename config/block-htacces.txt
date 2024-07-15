@@ -1,0 +1,9 @@
+
+ ## Memblokir direktory untuk pembuatan web di localhost dengan httaccess
+
+ nano /etc/apache2/apache2.conf
+
+ ## Cari baris kode :
+<Directory "/var/www/htdocs">
+	AllowOverride None (Ubah Menjadi All)
+<Directory>
