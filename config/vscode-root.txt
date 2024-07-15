@@ -1,0 +1,5 @@
+cukup gunakan ini:sudo code "your-directory" --user-data-dir='.' --no-sandbox
+
+misalnya untuk membuka /etc/nginx/nginx.conf , gunakan :
+
+sudo code /etc/nginx/nginx.conf --user-data-dir='.' --no-sandbox
