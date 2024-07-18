@@ -1,0 +1,20 @@
+ # Premissions file and folder
+
+
+-rwxr–rw- 1 user user 0 Jan 19 12:59 file1.txt
+
+    “-rwxr–rw-“ – Bagian ini akan menampilkan permission. Ada 3 huruf yang mungkin akan sering Anda lihat: r, w, x, d. d artinya tipe file adalah direktori (folder). Dalam contoh kita tersebut, huruf d tidak ada (seharusnya berada di urutan pertama, namun pada contoh tidak ada/diwakili oleh simbol “-” yang artinya “tidak”). Huruf x artinya permission untuk mengeksekusi file/folder (kita sering membutuhkan permission ini untuk masuk ke dalam folder).
+    Huruf w artinya permision untuk menulis file/folder (edit, hapus, dll). Terakhir, huruf r artinya adalah read. Jika kita memiliki permission untuk membacara, kita bisa membaca isi dari file, namun hanya itu saja. Kita tidak bisa meng-edit atau mengeksekusi file tersebut.
+    1 – Jumlah hard links. Biasanya hard link merupakan nama tambahan untuk sebuah file.
+    user user – Menampilkan pemilik (owner) dan group owner dari file.
+    0 – Menampilkan ukuran file.
+    Jan 19 12:59 – Menampilkan kapan terakhir kali file dimodifikasi.
+    file1.txt – Nama file/folder
+
+
+
+- 440 = Hanya untuk di Read
+- 446 = Bisa di Read dan Write
+- 775 = Bisa di Read, Write, Excute
+
+
