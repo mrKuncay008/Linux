@@ -17,4 +17,10 @@
 - 446 = Bisa di Read dan Write
 - 775 = Bisa di Read, Write, Excute
 
+# Untuk membuka Premission Vscode di folder root linux
+ - sudo chown -c -R $USER:$USER Folder
 
+- chown: change the ownership of files/directories
+- c: report all changes
+- R: do this recursively (for all files/directories beneath the given one)
+- $USER:$USER: change the owner and the group that owns the the entry to the user that issues the command (sudo preserves the values)
