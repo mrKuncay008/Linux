@@ -49,3 +49,20 @@
 - commit "[IMPROVE]" = Commit untuk dikembangkan.
 - commit "[FIX]" = Meng fix project.
 - commit "[MERGE]" = untuk menimpa perubahan Project
+
+## Rules Development Branch
+- main/master  = inti dari project master nya
+- Development = Biasa hak askses hanya di pegang Project leader/PM untuk di koreksi sebelum
+                di uplod ke master.
+- FEATURE A, B = Ini adalah Branch untuk di buat oleh Developer
+
+## Git Satsh
+- git stash save "Massage" = Ini untk menyimpan project sebelum di pull dari branch lain
+- git pull origin [branch name] = ini untuk menimpa dari brach yang akan dibuat
+- git stash list = Untuk melihat Line project yg di simpang di stash.
+- git stash apply stash@ {0} = Ini untuk menimpa atau mengganti line yang di buat
+
+## Alur Collabration Git
+Setiap Project memliki 3 alur branch yaitu Master->Development->Fiture dalam satu project.
+Seluruh Fiture akan di 'marge' ke Development sebelum di uploud ke master.
+Proses 'Marge' bisa langsung di github atau di Local, dan setiap marge akan ada konflict
