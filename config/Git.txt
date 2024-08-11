@@ -33,3 +33,19 @@
 ## Melihat atau mentrack projek yang di ubah :
 - git log
 - git show / git show <id-commit>
+
+# Git Reset
+- git reset soft = mengmbalikan sebelmnya tapi perubahan nya masih tersimpan
+- git reset hard = Mengemabalikan sebelumnya perubahanya di hapus
+- git reset = mengambalaikan sebalumnya perubahan nya untrack
+
+# Git Workflow
+ - Working Dir = Folder isi project
+ - Staging area = Menambahkan Project ke staging area git 
+ - Local Repo = Direkam nya project di staging area
+
+## Tips Commit Massage
+- commit "[FEATURE]" = Commit unuk baru.
+- commit "[IMPROVE]" = Commit untuk dikembangkan.
+- commit "[FIX]" = Meng fix project.
+- commit "[MERGE]" = untuk menimpa perubahan Project
