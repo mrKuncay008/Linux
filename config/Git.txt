@@ -19,6 +19,7 @@
 - ForwardAgent yes
 - buka github dan atur SSH KEY masukan code ssh.pub ke dalam git hub
 - lalu git remote set-url (ssh)
+https://dev.to/alfianandinugraha/menggunakan-ssh-untuk-remote-github-462
 
 ## Menambah atau menimpa repo ke folder baru: 
 
